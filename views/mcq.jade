@@ -4,7 +4,7 @@
 		
 		blockquote
 			p.hint_message
-			-var alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']
+			-var alphabet = ['1', '2', '3', '4', '5', '6', '7', '8']
 			-for(var i=0; i<question.count; i++)
 				label.radio-inline
 					input(name=question.id+"_group", type="radio")
@@ -13,9 +13,9 @@
 				br
 
 			.MCQbutton
-				button.btn.btn-default.btn-sm.submitMCQ Submit
+				button.btn.btn-default.btn-sm.submitMCQ 제출
 				-if(question.hint)
-					button.btn.btn-default.btn-sm.hintMCQ Hint
+					button.btn.btn-default.btn-sm.hintMCQ 힌트
 
 		.alert.MCQmessage
 		.MCQdescription
