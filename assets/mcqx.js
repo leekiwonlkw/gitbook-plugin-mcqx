@@ -25,7 +25,7 @@ require(["gitbook", "jquery"], function(gitbook, $) {
 
     var init = function() {
 
-        if(!$('.toolbar-delete').length)
+        if (!$('.toolbar-delete').length)
             gitbook.toolbar.createButton({
                 position: 'left',
                 icon: 'fa fa-history',
@@ -59,7 +59,7 @@ require(["gitbook", "jquery"], function(gitbook, $) {
                 $mcqBox.find('input[name=' + question.qid + '_group]').attr('disabled', true);
 
                 var speed = animation ? 'slow' : null;
-                $mcqBox.find('.MCQmessage').text('Correct.').show(speed);
+                $mcqBox.find('.MCQmessage').text('맞았습니다.').show(speed);
 
                 if (question.message)
                     $mcqBox.find('.MCQdescription').text(question.message).show(speed);
@@ -98,7 +98,7 @@ require(["gitbook", "jquery"], function(gitbook, $) {
                     }); //planting a cookie
                     correctAnswer(true);
                 } else {
-                    $mcqBox.find('.MCQmessage').text("Wrong answer, try again.").show('slow').delay(1000).hide('slow');
+                    $mcqBox.find('.MCQmessage').text("틀렸습니다. 다시 선택해 주세요.").show('slow').delay(1000).hide('slow');
                 }
             });
 
